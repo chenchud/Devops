@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+  - name: installing apache server
+    apt:
+      name:
+        - "{{ apache }}"
+        - "{{ libapache }}"
+      state: latest
+      update_cache: yes
+    #when: ansible_distribution == "Debian"
