@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+
+  - name: installing apache server
+    apt:
+      name: apache2
+  - name: installing monogodb
+    apt:
+      name: monogdb-org
